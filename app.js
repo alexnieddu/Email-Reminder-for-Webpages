@@ -1,4 +1,4 @@
-// Email Reminder for Webpage
+// Email Reminder for Webpages
 
 var fs = require('fs');
 var nodemailer = require('nodemailer');
@@ -15,11 +15,10 @@ setInterval(playGame, 1000*60*1);
 function playGame() {
 	request(url, function (error, response, body) {
 	
-		var searchterm = "Luis Fonsi feat. Daddy Yankee";
+		var searchterm = "searchterm";
 		var n = body.search(searchterm);
 	
 		if ( n != -1 && found == false) {
-			console.log('Emails were send.');
 		
 			var transporter = nodemailer.createTransport({
 				service: mailProvider,
